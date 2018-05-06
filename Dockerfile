@@ -3,7 +3,7 @@ FROM docker.bintray.io/jfrog/artifactory-pro:latest
 
 ADD ArtifactoryProInjector.jar ArtifactoryProInjector.jar
 
-ENTRYPOINT exec java -jar ArtifactoryProInjector.jar /opt/jfrog/artifactory
+RUN exec java -jar ArtifactoryProInjector.jar /opt/jfrog/artifactory
 
 # Key
 # eyJwcm9kdWN0SWQiOjQsInByb2R1Y3ROYW1lIjoiQXJ0aWZhY3RvcnkgUHJvIiwidmFsaWRGcm9tIjoxNDc5OD
