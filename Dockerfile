@@ -1,5 +1,5 @@
 
-FROM docker.bintray.io/jfrog/artifactory-pro:latest
+FROM docker.bintray.io/jfrog/artifactory-pro:9.3.5
 
 ADD ArtifactoryProInjector.jar ArtifactoryProInjector.jar
 
