@@ -1,13 +1,6 @@
+FROM docker.bintray.io/jfrog/artifactory-pro:6.0.0
 
-FROM artifactory-pro:5.9.3
+ADD artifactory-injector-1.1.jar artifactory-injector-1.1.jar
 
-ADD ArtifactoryProInjector.jar ArtifactoryProInjector.jar
-
-RUN exec java -jar ArtifactoryProInjector.jar /opt/jfrog/artifactory
-
-# Key
-# eyJwcm9kdWN0SWQiOjQsInByb2R1Y3ROYW1lIjoiQXJ0aWZhY3RvcnkgUHJvIiwidmFsaWRGcm9tIjoxNDc5OD
-# UwNDMwNTcyLCJ2YWxpZFVudGlsIjoxNzk1MjEwNDMwNTczLCJxdWFudGl0eSI6MSwidHlwZSI6IkhBIiwiYXR0cmli
-# dXRlcyI6eyJFTUFJTCI6IlI0UDMubmV0IiwiQ09NUEFOWSI6IlI0UDMubmV0IiwiTEFTVE5BTUUiOiJuZXQiLCJGSVJTVE5B
-# TUUiOiJSNFAzIn19
+RUN exec java -jar artifactory-injector-1.1.jar /opt/jfrog/artifactory --debug=1
 
